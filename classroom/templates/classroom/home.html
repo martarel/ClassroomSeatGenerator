@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Classroom Seat Generator</title>
+        <script type="text/javascript">
+            function goToNewPage()
+            {
+                var url = document.getElementById('list').value;
+                if(url != 'none') {
+                    window.location = url;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Classroom Seat Generator</h1>
+        <form>
+            <select name="list" id="list" accesskey="target">
+                <option value='none' selected>Choose a classroom</option>
+                <option value="a23">A23</option>
+                <option value="b12">B12</option>
+                <option value="b31">B31</option>
+            </select>
+            <input type=button value="Go" onclick="goToNewPage()" />
+        </form>
+    </body>
+</html>
+
+
+
