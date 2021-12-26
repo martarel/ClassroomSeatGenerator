@@ -6,6 +6,9 @@
     <body>
         <h1>A23</h1>
         <p>Sätt er på era platser tack!</p>
+        {% for s in students %}
+            <p>{{ s.name }}</p>
+        {% endfor %}
     </body>
 </html>
 

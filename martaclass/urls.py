@@ -24,5 +24,4 @@ urlpatterns = [
     path('b31/', views.b31),
     path('b12/', views.b12),
     path('a23/', views.a23)
-
 ]
