@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -15,7 +15,12 @@
             }
         </script>
     </head>
-    <body>
+  <body>
+    <style>
+        body {
+          background-image: url("{% static 'photobackround1.jpg' %}");
+        }
+    </style>
         <h1>Classroom Seat Generator</h1>
         <form>
             <select name="list" id="list" accesskey="target">
