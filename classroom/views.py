@@ -4,23 +4,23 @@ import random
 def home(request):
     return render(request, 'classroom/home.html')
 
-def a23(request, chosen_group = "NA20MA"):
-    students = Student.objects.order_by('?').filter(group = chosen_group)
+def a23(request, klass = "NA20MA"):
+    students = Student.objects.order_by('?').filter(group = klass)
     context = {
         'students': students
     }
     return render(request, 'classroom/a23.html', context)
 
-def b31(request, chosen_group = "NA20MA"):
-    students = Student.objects.order_by('?').filter(group = chosen_group)
+def b31(request, klass = "NA20MA"):
+    students = Student.objects.order_by('?').filter(group = klass)
 
     context = {
         'students': students
     }
     return render(request, 'classroom/b31.html', context)
 
-def b12(request, chosen_group = "NA20MA"):
-    students = Student.objects.order_by('?').filter(group = chosen_group)
+def b12(request, klass = "NA20MA"):
+    students = Student.objects.order_by('?').filter(group = klass)
     context = {
         'students': students
     }

@@ -6,7 +6,9 @@
         <script type="text/javascript">
             function goToNewPage()
             {
-                var url = document.getElementById('list').value;
+                var room = document.getElementById('list').value;
+                var klass = document.getElementById('list2').value;
+                var url = room + '/' + klass
                 if(url != 'none') {
                     window.location = url;
                 }
@@ -21,6 +23,11 @@
                 <option value="a23">A23</option>
                 <option value="b12">B12</option>
                 <option value="b31">B31</option>
+            </select>
+            <select name="list2" id="list2" accesskey="target">
+                <option value='none' selected>Choose a class</option>
+                <option value="NA20MA">NA20MA</option>
+                <option value="NA21MA">NA21MA</option>
             </select>
             <input type=button value="Go" onclick="goToNewPage()" />
         </form>
