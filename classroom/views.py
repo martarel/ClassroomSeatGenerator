@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import *
-import random 
 def home(request):
     return render(request, 'classroom/home.html')
 
