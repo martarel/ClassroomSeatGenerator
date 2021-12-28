@@ -1,15 +1,205 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>B31</h1>
-        <p>Sätt er på era platser tack!</p>
-        {% for s in students %}
-            <p>{{ s.name }}</p>
-        {% endfor %}
-    </body>
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>B31</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .container {
+        position: absolute;
+        font-family: Arial;
+      }
+
+      .block1 {
+        position: absolute;
+        bottom: 65px;
+        right: 275px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block2 {
+        position: absolute;
+        bottom: 0px;
+        right: 200px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block3 {
+        position: absolute;
+        bottom: 0px;
+        right: 205px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block4 {
+        position: absolute;
+        bottom: 0px;
+        right: 205px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block5 {
+        position: absolute;
+        bottom: 130px;
+        right: -615px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block6 {
+        position: absolute;
+        bottom: 0px;
+        right: 200px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block7 {
+        position: absolute;
+        bottom: 0px;
+        right: 210px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block8 {
+        position: absolute;
+        bottom: 0px;
+        right: 200px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block9 {
+        position: absolute;
+        bottom: 135px;
+        right: -610px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block10 {
+        position: absolute;
+        bottom: 0px;
+        right: 200px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block11 {
+        position: absolute;
+        bottom: 0px;
+        right: 210px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block12 {
+        position: absolute;
+        bottom: 0px;
+        right: 200px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block13 {
+        position: absolute;
+        bottom: 130px;
+        right: -610px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block14 {
+        position: absolute;
+        bottom: 0px;
+        right: 200px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block15 {
+        position: absolute;
+        bottom: 0px;
+        right: 210px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .block16 {
+        position: absolute;
+        bottom: 0px;
+        right: 205px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    </style>
+    <script>
+        function set(student, id) {
+        document.getElementById("id").innerHTML = student;
+    </script>
+  </head>
+  <body>
+    {% for s in students %}
+        <body onLoad="javascript:set(s, i)" ></body>
+        <script type="text/javascript" language="JavaScript">
+            set(s, forloop.counter);
+         </script>
+    {% endfor %}
+    <div class="container">
+      <img src="{% static 'background.png' %}" alt="En bild som visar där alla ska sitta" style="width: 80%"/>
+      <div class="block1">
+        <h3>{{ students.0.name }}</h3>
+        <div class="block2">
+          <h3>{{ students.1.name }}</h3>
+          <div class="block3">
+            <h3>{{ students.2.name }}</h3>
+            <div class="block4">
+              <h3>{{ students.3.name }}</h3>
+              <div class="block5">
+                <h3>Elev</h3>
+                <div class="block6">
+                  <h3>Elev</h3>
+                  <div class="block7">
+                    <h3>Elev</h3>
+                    <div class="block8">
+                      <h3>Elev</h3>
+                      <div class="block9">
+                        <h3>Elev</h3>
+                        <div class="block10">
+                          <h3>Elev</h3>
+                          <div class="block11">
+                            <h3>Elev</h3>
+                            <div class="block12">
+                              <h3>Elev</h3>
+                              <div class="block13">
+                                <h3>Elev</h3>
+                                <div class="block14">
+                                  <h3>Elev</h3>
+                                  <div class="block15">
+                                    <h3>Elev</h3>
+                                    <div class="block16">
+                                        <h3>Elev</h3>
+  </body>
 </html>
-
-
-
-
-

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import *
-
+import random 
 def home(request):
     return render(request, 'classroom/home.html')
 
@@ -13,6 +13,7 @@ def a23(request, chosen_group = "NA20MA"):
 
 def b31(request, chosen_group = "NA20MA"):
     students = Student.objects.order_by('?').filter(group = chosen_group)
+
     context = {
         'students': students
     }
