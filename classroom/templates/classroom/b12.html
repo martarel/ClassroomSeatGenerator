@@ -1,13 +1,353 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>B12</title>
-    </head>
-    <body>
-        <h1>B12</h1>
-        <p>Sätt er på era platser tack!</p>
-        {% for s in students %}
-            <p>{{ s.name }}</p>
-        {% endfor %}
-    </body>
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>B12</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .container {
+        position: absolute;
+        font-family: Arial;
+        text-align: center; 
+      }
+      .block1 {
+        position: absolute;
+        bottom: 15px;
+        right: 215px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block2 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block3 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block4 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block5 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block6 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block7 {
+        position: absolute;
+        bottom: 110px;
+        right: -650px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block8 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block9 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block10 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block11 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block12 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block13 {
+        position: absolute;
+        bottom: 110px;
+        right: -650px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block14 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block15 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block16 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block17 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block18 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block19 {
+        position: absolute;
+        bottom: 110px;
+        right: -650px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block20 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block21 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block22 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block23 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block24 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block25 {
+        position: absolute;
+        bottom: 110px;
+        right: -650px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block26 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block27 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block28 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block29 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .block30 {
+        position: absolute;
+        bottom: 0px;
+        right: 130px;
+        background-color: black;
+        color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+     
+  </style>
+  </head>
+  <body style = "background-color: grey;"> 
+<div class="container" class= "img">
+  <img src="{ static 'b12.png' }" align="right" style="width: 80%"/>
+  <h1>Klassrum: </h1>    
+  <h2>Klass: </h2>
+  <div class="block1">
+        <h3>Elev</h3>
+        <div class="block2">
+          <h3>Elev</h3>
+          <div class="block3">
+            <h3>Elev</h3>
+            <div class="block4">
+              <h3>Elev</h3>
+              <div class="block5">
+                <h3>Elev</h3>
+                <div class="block6">
+                  <h3>Elev</h3>
+                  <div class="block7">
+                    <h3>Elev</h3>
+                    <div class="block8">
+                      <h3>Elev</h3>
+                      <div class="block9">
+                        <h3>Elev</h3>
+                        <div class="block10">
+                          <h3>Elev</h3>
+                          <div class="block11">
+                            <h3>Elev</h3>
+                            <div class="block12">
+                              <h3>Elev</h3>
+                              <div class="block13">
+                                <h3>Elev</h3>
+                                <div class="block14">
+                                  <h3>Elev</h3>
+                                  <div class="block15">
+                                    <h3>Elev</h3>
+                                    <div class="block16">
+                                      <h3>Elev</h3>
+                                      <div class="block17">
+                                        <h3>Elev</h3>
+                                        <div class="block18">
+                                          <h3>Elev</h3>
+                                          <div class="block19">
+                                            <h3>Elev</h3>
+                                            <div class="block20">
+                                              <h3>Elev</h3>
+                                              <div class="block21">
+                                                <h3>Elev</h3>
+                                                <div class="block22">
+                                                  <h3>Elev</h3>
+                                                  <div class="block23">
+                                                    <h3>Elev</h3>
+                                                    <div class="block24">
+                                                      <h3>Elev</h3>
+                                                      <div class="block25">
+                                                        <h3>Elev</h3>
+                                                        <div class="block26">
+                                                          <h3>Elev</h3>
+                                                          <div class="block27">
+                                                            <h3>Elev</h3>
+                                                            <div class="block28">
+                                                              <h3>Elev</h3>
+                                                              <div class="block29">
+                                                                <h3>Elev</h3>
+                                                                <div class="block30">
+                                                                  <h3>Elev</h3>
+                                    
+  </body>
 </html>
