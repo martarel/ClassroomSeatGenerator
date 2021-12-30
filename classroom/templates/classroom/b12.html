@@ -292,6 +292,10 @@
   <body> 
     <center><h1>Sätt er på era platser tack!</h1></center>
     {% for s in students %}
+        <body onLoad="javascript:set(s, i)" ></body>
+        <script type="text/javascript" language="JavaScript">
+            set(s, forloop.counter);
+         </script>
     {% endfor %}
 <img Class="imageposition" src="{% static 'UVC-version1.png' %}" width="1000" height="530">
 
@@ -331,7 +335,7 @@
                                       <div class="block17">
                                         <h3>{{ students.16.name }}</h3>
                                         <div class="block18">
-                                          <h3>{{ students.17.name }}v</h3>
+                                          <h3>{{ students.17.name }}</h3>
                                           <div class="block19">
                                             <h3>{{ students.0.name }}</h3>
                                             <div class="block20">
