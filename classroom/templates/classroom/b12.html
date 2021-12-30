@@ -1,20 +1,29 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>B12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
 
       .container {
-        position: absolute;
         font-family: Arial;
         text-align: center; 
       }
+      .imageposition {
+        background: url("{% static 'klassb12.png' %}");
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;
+        height: 530px;
+        position: relative;
+      }
       .block1 {
         position: absolute;
-        top: 400px;
-        left: 700px;
+        bottom: 13%;
+        right: 19%;
         background-color: black;
         color: white;
         padding-left: 20px;
@@ -281,27 +290,13 @@
         padding-left: 20px;
         padding-right: 20px;
       }
-      .imageposition{
-        position: absolute;
-        top: 80px;
-        left: 0px;
-        margin: 0;
-      }
-  
   </style>
   </head>
   <body> 
     <center><h1>Sätt er på era platser tack!</h1></center>
-    {% for s in students %}
-        <body onLoad="javascript:set(s, i)" ></body>
-        <script type="text/javascript" language="JavaScript">
-            set(s, forloop.counter);
-         </script>
-    {% endfor %}
-<img Class="imageposition" src="{% static 'UVC-version1.png' %}" width="1000" height="530">
-
-  <div class="container">
-    <div class="block1">
+  <div class="imageposition">
+    <div class="container">
+      <div class="block1">
       <h3>Marta</h3>
         <div class="block2">
           <h3>{{ students.1.name }}</h3>
@@ -363,3 +358,4 @@
                                                                   <h3>{{ students.20.name }}</h3>
   </body>
 </html>
+
