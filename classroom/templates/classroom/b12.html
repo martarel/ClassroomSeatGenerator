@@ -297,7 +297,11 @@
   <div class="imageposition">
     <div class="container">
       <div class="block1">
-      <h3>Marta</h3>
+      {% if students.0.class == "NA20MA" %}
+        <h3>Marta</h3>
+      {% else %}
+        <h3>{{ students.0.name }} </h3>
+      {% endif %}
         <div class="block2">
           <h3>{{ students.1.name }}</h3>
           <div class="block3">
